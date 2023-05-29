@@ -111,9 +111,9 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/dot/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 
 # Gapps
-# ifeq ($(WITH_GAPPS), true)
+ifeq ($(WITH_GAPPS), true)
     $(call inherit-product, vendor/gapps/config.mk)
-# endif
+endif
 
 #Telephony
 $(call inherit-product, vendor/dot/config/telephony.mk)
