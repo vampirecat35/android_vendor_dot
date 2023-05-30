@@ -112,7 +112,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 
 # Gapps
 ifeq ($(WITH_GAPPS), true)
-    $(call inherit-product, vendor/gapps/config.mk)
+    $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+#   $(call inherit-product, vendor/gapps/config.mk)
 endif
 
 #Telephony
